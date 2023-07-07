@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (let i = 0; i < 5; i++){
+        const computerSelection = getComputerChoice();
+        const playerSelection = prompt("enter a choice").toLowerCase();
+        console.log(playRound(playerSelection, computerSelection))
+        }
+        function getComputerChoice() {
+            const choice = Math.floor((Math.random() *3 ) + 1);
+            if (choice === 1) {
+                return "rock";
+            } else if (choice === 2) {
+                return "scissors";
+            }
+            else if(choice === 3) {
+                return "paper";
+            }
+        }
+
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection === "rock" && computerSelection === "paper") {
+                return "You Lose! Paper beats Rock";
+            } else if (playerSelection === "rock" && computerSelection === "scissors") {
+                return "You Win! Rock beats Scissors!";
+            } else if (playerSelection === "rock" && computerSelection === "rock") {
+                return "Its a Draw";
+            } else if (playerSelection === "paper" && computerSelection === "scissors") {
+                return "You Lose! Scissors beats Paper!";
+            } else if (playerSelection === "paper" && computerSelection === "rock") {
+                return "You Win! Paper beats Rock!";
+            } else if (playerSelection === "paper" && computerSelection === "paper") {
+                return "Its a Draw";
+            } else if (playerSelection === "scissors" && computerSelection === "scissors") {
+                return "Its a Draw";
+            } else if (playerSelection === "scissors" && computerSelection === "paper") {
+                return "You Win! Scissors beats Paper!";
+            } else if (playerSelection === "scissors" && computerSelection === "rock") {
+                return "You Lose! Rock beats Scissors!";
+            }
+        }
+
+    
+        //console.log(playRound(playerSelection, computerSelection))
+    </script>
+</body>
+</html>
