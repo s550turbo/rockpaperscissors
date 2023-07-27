@@ -1,0 +1,33 @@
+body {
+    background-color: bisque;
+    text-align: center;
+}
+
+button {
+    background-color: white;
+    color: blue;
+    box-shadow:chocolate;
+    font-style: italic;
+    font-weight: bold;
+    width: 200px;
+    height: 200px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 200px auto;
+}
+
+#resultsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: blue;
+    color: white;
+    height: 200px;
+    width: 400px;
+    margin: 72px auto;
+}
